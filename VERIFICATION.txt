@@ -1,0 +1,2 @@
+Passed: initialization; scoped ids; novel editor; word counts; positive additions; complete backup validation; malformed backup rejection; IndexedDB commit.
+Browser installation/offline visual tests: not run (Chromium download unavailable).
