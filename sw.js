@@ -1,4 +1,4 @@
-const CACHE='masahati-v2.0.0';
+const CACHE='masahati-v2.1.0';
 const FILES=['./','./index.html','./styles.css','./app.js','./boot.js','./store.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('message',e=>{if(e.data==='activate')self.skipWaiting()});

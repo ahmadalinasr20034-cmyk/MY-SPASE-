@@ -1,2 +1,7 @@
-Passed: initialization; scoped ids; novel editor; word counts; positive additions; complete backup validation; malformed backup rejection; IndexedDB commit.
-Browser installation/offline visual tests: not run (Chromium download unavailable).
+Tested in headless Chromium over http://localhost (Playwright), 2.1:
+- Load without page errors; 4 home tiles; migration of old localStorage budget data into IndexedDB (totals matched).
+- Save status, persistence after reload, service worker registered/controlling, offline reload with data intact.
+- Password dialog: fields are type=password; inline errors for short / mismatched password; no native prompt() used; wrong password rejected on unlock, correct password opens data.
+- Encryption: stored vault contains no plaintext after enabling (checked in v2.0 run).
+- Paste import: real v1 backup (from the old single-file app) containing only budget+diary imported; an existing library novel was kept; corrupt paste rejected with no data change.
+Not tested: installation on a real phone (Android/iOS), update button flow, multi-tab conflicts, large data, timer, trash/restore, account/sync (not implemented).
